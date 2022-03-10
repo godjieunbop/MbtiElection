@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>우리나라 대빵, 누굴 뽑을까?</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="역대급으로 고르기 어려운 선거, 나도 모르는 내 마음은?">
+  <meta property="og:type" content="website"> 
+  <meta property="og:title" content="🚨 비상이다! 비상! 🚨"/>
+  <meta property="og:description" content="코앞으로 다가온 대선, 대체 누굴 뽑지?"/>
+  <meta property="og:image" content="https://mbtielection.netlify.app/img/all.gif"/>
+  <meta property="og:url" content="https://mbtielection.netlify.app/">
+</head>
+<body class="container">
+  <article class="start mt-5">
+    <h5 class="mdname mt-5 text-left">🚨 비상이다! 비상! 🚨</h5>
+    <h2 class="text-left">코앞으로 다가온 대선,<br> 대체 누굴 뽑지?</h2>
+    <img id="image-start" class="mt-3" src="img/all.gif" alt="start-image">
+    <button type="button" class="btn btn-start mt-5" onclick="start();">나와 가장 잘 맞는 대선 후보<br><b>>>Go<<</b></button>
+  </article>
+  <article class="question mt-3">
+    <div class="progress mt-5 mb-5">
+      <div class="progress-bar" role="progressbar" style="width: calc(100/6*1%)"></div>
+    </div>
+    <div class="square"></div>
+    <h2 id="title" class="text-center mt-5 mb-5">문제</h2>
+    <div class="square"></div>
+    <input id="type" type="hidden" value="EI">
+    <div class="btn btn-box mt-5">
+      <button id="A" type="button" class="btn btn-question1">Primary</button>
+      <button id="B" type="button" class="btn btn-question2">Primary</button>
+    </div>
+  </article>
+  <article class="result mt-3">
+    <h4 id="people-title" class="text-center mt-5 mb-3">🤏🏻 나와 가장 잘 맞는 대선 후보 👇🏻</h4>
+    <img id="img" class="mt-3" src="" alt="mainpeople">
+    <h2 id="people" class="text-center mt-3">후보이름설명</h2>
+    <h2 id="people-name" class="text-center mb-5">후보이름</h2>
+    <div class="square"></div>
+    <h3 id="explainst" class="text-left mt-5 mb-3">설명</h3>
+    <h5 id="explain" class="text-left">설명</h5>
+    <h3 id="explainwk" class="text-left mt-5 mb-3">설명</h3>
+    <h5 id="explain2" class="text-left mb-5">설명</h5>
+    <div class="square"></div>
+    <button type="button" class="btn btn-cp mt-5" onclick="cpopen();">제 20대 대통령선거<br>공약 한눈에 보기</span></button>
+    <h4 id="share" class="text-center mt-5">이번 대선. 누굴 뽑을지<br>너도 정하지 못했니?</h4>
+    <h6 id="share2" class="text-center mt-3">나도 모르는 내 마음,<br>당신의 정치 성향은··</h6>    
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <div class="addthis_inline_share_toolbox mt-3"></div>
+    <button type="button" class="btn btn-reset mt-5 mb-5" onclick="restart();">나랑 잘 안맞는거 같은데?<br>다시 검사하기</span></button>
+  </article>
+  <article class="kakao_ad mt-5">
+    <ins class="kakao_ad_area mt-3" style="display:none;" 
+      data-ad-unit    = "DAN-JYwY1UTe9IsVETlQ" 
+      data-ad-width   = "320" 
+      data-ad-height  = "100">
+    </ins>
+  </article>
+  <article class="cpopen mt-5">
+    <div class="accordion col-9 mt-3" id="accordionExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingName">공약 #1. 일자리</h2>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button ab1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">기호 1번. 이재명 후보의 공약</button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            19~29세 청년에게 매년 100만 원씩 기본소득을 주겠다고 했어요. 최대 1000만 원까지 낮은 이자(3%대)로 돈을 빌려주는 공약도 냈고, 디지털 분야에 투자를 늘려서 200만 개가 넘는 일자리를 만들겠다 했어요.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+          <button class="accordion-button ab2 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">기호 2번. 윤석열 후보의 공약</button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            청년이 통장에 돈을 모아두면 나라에서 매년 250만 원씩 얹어주고, 모은 돈(1년에 최대 1000만 원)에 붙은 이자에는 세금을 안 매기겠다고 했어요. 소득이 적거나 고용 상태가 불안한 청년에게는 따로 현금을 주겠다고도 했어요.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+          <button class="accordion-button ab3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">기호 3번. 심상정 후보의 공약</button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            20세가 된 모든 청년에게 3000만 원씩 주겠다고 했어요. 공공기관에서 청년을 고용해야 하는 비율을 늘리는 등의 방법으로 청년 일자리를 더 만들겠다고 했어요.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="accordion col-9 mt-3" id="accordionExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingName">공약 #2. 주택공급</h2>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button ab1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">기호 1번. 이재명 후보의 공약</button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            무주택자라면 저렴한 임대료만 내고 30년 이상 살 수 있게 하는 ‘기본주택’을 약속했는데요, 그중 일부를 청년에게 먼저 주겠다고 했어요.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+          <button class="accordion-button ab2 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">기호 2번. 윤석열 후보의 공약</button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            공급할 주택 중 몇몇 주택은 원가에 청년에게 분양해주겠다고 했어요. 분양받은 집은 5년 뒤에 나라에 되팔아서 이익을 남길 수 있게 하겠다고 했고요.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+          <button class="accordion-button ab3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">기호 3번. 심상정 후보의 공약</button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            나라 지원으로 제공되는 공공임대주택을 보증금 없이 빌려주겠다고 했어요. 더 많은 청년에게 주거비를 지원하겠다고도 했고요.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="accordion col-9 mt-3" id="accordionExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingName">공약 #3. 성범죄</h2>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button ab1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">기호 1번. 이재명 후보의 공약</button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            디지털 성범죄에 더 확실히 대응하겠다고 했어요. 성착취물이 유포됐을 때 빠르게 삭제할 수 있도록 관련 기술에도 더 투자를 하겠다고. 스토킹 범죄의 경우, 지금은 피해자가 원치 않으면 가해자를 처벌하지 않는 반의사불벌죄가 있는데 이 조항을 없애고 처벌을 강화하겠다고도 했어요.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+          <button class="accordion-button ab2 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">기호 2번. 윤석열 후보의 공약</button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            높은 지위를 이용해 성범죄 저지르는 걸 뿌리 뽑겠다고 했어요. 성범죄자가 더 강한 처벌을 받도록 양형기준을 높이겠다고도 했고요. 거짓으로 성폭력을 당했다고 신고하는 ‘무고’도 법에 명시해 처벌하겠다고도 했어요.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+          <button class="accordion-button ab3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">기호 3번. 심상정 후보의 공약</button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            비동의 강간죄를 법으로 딱 만들자고 했어요. 상대가 명확하게 동의하지 않은 채 성관계를 시도했다면 성폭행으로 처벌하겠다는 것. 성범죄 관련 형량을 높이겠다고도 했어요.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="accordion col-9 mt-3" id="accordionExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingName">공약 #4. 출산 및 육아</h2>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button ab1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">기호 1번. 이재명 후보의 공약</button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            프리랜서와 비정규직 노동자도 출산휴가와 육아휴직을 자유롭게 쓸 수 있도록 하겠다고 했고, 출산휴가가 끝나고 별다른 신청 없이 육아휴직을 시작하는 ‘자동등록제’도 도입하겠다고 했어요.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+          <button class="accordion-button ab2 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">기호 2번. 윤석열 후보의 공약</button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            아이가 태어날 때부터 초등학교에 갈 때까지 국가시스템으로 확실히 지원하겠다고 했어요. 육아휴직도 부모 각각 1년 6개월, 총 3년 사용할 수 있게 하겠다고.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+          <button class="accordion-button ab3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">기호 3번. 심상정 후보의 공약</button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            일하면서 육아·돌봄에도 힘쓸 수 있도록 노동 시간을 유연하게 조정하게끔 하겠다고 했어요. 조정하더라도 회사에서 불이익 받지 않게 하겠다고도 했고요. 청년·청소년 미혼모·미혼부를 국가에서 더 많이 책임지게 하겠다는 공약도 있어요.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="accordion col-9 mt-3" id="accordionExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingName">공약 #5. 고용 차별</h2>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button ab1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">기호 1번. 이재명 후보의 공약</button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            성별만으로 임금이 차이나는 일을 줄이기 위해서 임금과 관련된 정보를 의무적으로 공개하도록 하겠다고 했어요(=성별임금공시제). 또 고용 차별을 해결할 전담 부서를 만들겠다고 했고요.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+          <button class="accordion-button ab2 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">기호 2번. 윤석열 후보의 공약</button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            직장을 그만뒀다가 다시 일을 시작하기 힘들어지는 경력단절 문제에 대해 해결책을 만들겠다고 약속했어요. 여성에게 고용 기회가 더 적게 주어진다며 이를 해결해야 한다고 했고요.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+          <button class="accordion-button ab3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">기호 3번. 심상정 후보의 공약</button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            임금 차별을 없애기 위해 이 후보와 같은 성별임금공시제를 도입하겠다고 했어요.
+          </div>
+        </div>
+      </div>
+    </div>
+    <button type="button" class="btn btn-reopen mt-5 mb-5" onclick="reopen();">결과화면으로<br>돌아가기</span></button>
+  </article>
+  <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+  <input type="hidden" id="EI" value="0">
+  <input type="hidden" id="SN" value="0">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script>
+    var num = 1;
+    var q = {
+      1: {"title": "💵💵💵<br><br>경제적 지원에 대한<br>당신의 생각은?", "type": "EI", "A": "딱 한 번 크게 지원받기", "B": "매년 꾸준히 기본 소득 지원받기"},
+      2: {"title": "🏠🏠🏠<br><br>주택 공급<br>어떻게 해야할까?", "type": "EI", "A": "평생 공공임대주택 공급받기", "B": "내 집 마련이 가능한 지원받기"},
+      3: {"title": "📚📚📚<br><br>교육에 대한<br>당신의 생각은?", "type": "EI", "A": "일반고로 전환하고 고교학점제 비중높이기", "B": "학교 선택권은 그대로 두고 정시 확대하기"},
+      4: {"title": "💥💥💥<br><br>북한과의 관계<br>어떻게 해야할까?", "type": "SN", "A": "한미동맹을 강화해 방어력 높이기", "B": "비핵화 후 종전·평화선언 하기"},
+      5: {"title": "👮🏻👮🏻👮🏻<br><br>성범죄 처벌에 대한<br>당신의 생각은?", "type": "SN", "A": "성범죄 처벌 강화와 무고죄를 법으로", "B": "반의사불벌죄 없애고 성범죄 처벌 강화"},
+      6: {"title": "👷🏻👷🏻👷🏻<br><br>노동문제<br>어떻게 해야할까?", "type": "SN", "A": "여러 수당을 줄이고 대기업 규제 완화하기", "B": "여러 수당 늘리고 대기업 규제 강화하기"}
+    }
+    var result = {
+      "IN": {"people": "🟦더불어민주당", "people-name": "기호 1번 이재명", "explainst": "💪🏻이 후보의 경쟁력", "explain": "1. 고생도 해본 사람이 안다.😅<br>&nbsp대표적인 '개천에서 난 용'으로 온갖 고생을 다 겪어봤기 때문에 누구보다 서민의 마음을 잘 알아요.<br><br>2. 그래도, 일은 잘하잖아?😎<br>&nbsp약속한건 해내는 사람으로 거침없이 쏟아져 나오는 '사이다'와 미친 추진력은 모두에게 인정받는 부분이에요.<br><br>3. 지금까지의 민주당과 다르다?😶‍🌫️<br>&nbsp정권을 바꿔야 한다는 주장이 주를 이루는 상황 속 '민주당은 싫지만, 이재명은 민주당과 다르다'는 평가가 있을만큼 현 정부의 문제를 지적하며 다른 행보를 약속하고 있어요.", "explainwk": "👂🏻이 후보의 개선점", "explain2": "1. 도덕성과 인성, 문제 있지 않아?🤔<br>&nbsp친형을 강제로 정신병원에 입원시킨 혐의로 재판을 받았으며 '사이다 발언'을 넘어선 거친 언행이 항상 도마에 올라 문제점으로 지적받아요.<br><br>2. 가족들이 골치🤨<br>&nbsp이재명 부인 김혜경 씨는 더불어민주당 내 선거를 앞두고 다른 후보를 비판하고 이재명만 지지하는 글을 계속 올린 혐의를 받은 적 있어요. 큰아들은 도박 문제로 경찰이 수사 중이에요.<br><br>3. 일은 잘하는데, 문제도 있는걸?😠<br>&nbsp이재명이 성남시장으로 있던 시절, 대장동에 아파트와 상가 등을 짓는 사업에 문제가 제기됐어요. 전국을 떠들썩하게 만든 대장동·화천대유 사건이에요.", "img": "img/1.jpg"},
+      "IS": {"people": "🟥국민의힘", "people-name": "기호 2번 윤석열", "explainst": "💪🏻이 후보의 경쟁력", "explain": "1. 일을 잘하는데, 끈기도 있다.😄<br>&nbsp윤석열은 사법고시 9번만에 검사가 됐어요. 자신의 장점을 '인내심'이라 하지만, 수사 실력도 뛰어났어요.<br><br>2. 압력? 그딴거 모르겠고!😮<br>&nbsp'원칙을 지키는 검사'로 유명할 만큼 죄를 지었다면 대통령이라도 가리지 않고 수사하며 전직 대통령을 두 명이나 구속했어요.<br><br>3. 문재인 정권 교체하자!🧐<br>&nbsp'누가 됐든 국민의힘 뽑자'일 만큼 정권을 바꿔야 한다는 사람이 과반을 넘어서며 야당 후보가 당선돼야 한다고 보는 사람이 많아졌어요.", "explainwk": "👂🏻이 후보의 개선점", "explain2": "1. 나라를 이끌 정도는..🤔<br>&nbsp대통령은 외교·경제·환경 등 책임져야 할 것이 많은데,딱히.. 오히려 후보로 뽑힌 후 여러 발언들이 '나라 상황을 알긴 하는건가?'하는 의구심을 키웠어요.<br><br>2. 리더십이 부족해😐<br>&nbsp윤석열의 문제점 중 하나로 '통합을 못한다'는 점이 있을만큼 국민의힘 내부에서 여러 트러블이 있었어요. 이준석, 김종인 등 여러 정치인들을 무시한다는 말이 나올 만큼이나요.<br><br>3. 사람 자체가 비호감이야😱<br>&nbsp쩍벌 자세나 여러 발언 때문에 2030 사이에서는 '꼰대 부장님'인 비호감 이미지로 찍혔어요. 차별적인 언행, 육체노동과 저학력층 비하, 저출생=페미니즘 등 문제가 된 표현들도 많아요.", "img": "img/2.jpg"},
+      "EN": {"people": "🟨정의당", "people-name": "기호 3번 심상정", "explainst": "💪🏻이 후보의 경쟁력", "explain": "1. 노동자의 마음을 잘 알아줘.🤗<br>&nbsp심상정은 약 25년 동안 노동운동을 했어요. 국회의원이 된 후 지금까지 항상 노동자를 위해 목소리를 내왔어요.<br><br>2. 일도 잘하던데?😎<br>&nbsp'거침없는 발언'으로 국정감사 때마다 화제가 됐어요. 이외에 반값등록금, 카드 수수료 인하 등 시민들을 위한 법안도 꾸준히 냈어요.<br><br>3. 소수자의 대표 대변인!🤩<br>&nbsp여성·장애인·성소수자 등 정치권이 외면하는 이들을 위해 항상 목소리를 내오며 다른 정치인은 눈치를 볼 때 확고한 입장을 밝혀왔어요.", "explainwk": "👂🏻이 후보의 개선점", "explain2": "1. 너무 급진적이야🤔<br>&nbsp심상정의 진보 정책은 때로는 너무 '노동자 편'이라는 비판을 받아요. 먼 미래에나 가능할 것 같은 정책이라 할 수는 있나?라는 의문이 꼬리표처럼 따라다녀요.<br><br>2. 어차피 안 될 것 같아😑<br>&nbsp낮은 지지율이 문제예요. 이번 대선은 사람들이 자신의 '소신'을 행하기엔 너무 치열해서 심상정을 뽑으려던 사람도 마음을 바꿔 당선 가능성이 높은 후보를 지지하기도 해요.<br><br>3. 또 심상정이야?😒<br>&nbsp'진보정당엔 심상정밖에 없냐'는 비판이 가장 묵직한 쓴소리로 들렸다고 할 만큼 네 번째 대선 도전인데요. 당 안팎으로 심상정 피로감이라는 얘기가 나올만큼 사람들이 점점 지쳐가고 있어요.", "img": "img/3.jpg"},
+      "ES": {"people": "❗국가혁명당", "people-name": "기호 6번 허경영", "explainst": "💪🏻이 후보의 경쟁력", "explain": "Yeah! Let me introduce 허경영", "explainwk": "👂🏻이 후보의 개선점", "explain2": "내 눈을 바라봐! 넌 행복해지고!", "img": "img/6.jpg"}
+    }
+    function start() {
+      $(".start").hide();
+      $(".question").show();
+      next();
+    }
+    $("#A").click(function(){
+      var type = $("#type").val();
+      var preValue = $("#"+type).val();
+      $("#"+type).val(parseInt(preValue)+1);
+      next();
+    });
+    $("#B").click(function(){
+      next();
+    })
+    function next() {
+      if(num == 7){
+        $(".question").hide();
+        $(".result").show();
+        var mbti = "";
+        ($("#EI").val() < 2) ? mbti += "I" : mbti += "E";
+        ($("#SN").val() < 2) ? mbti += "N" : mbti += "S";
+        $("#img").attr("src", result[mbti]["img"]);
+        $("#people").html(result[mbti]["people"]);
+        $("#people-name").html(result[mbti]["people-name"]);
+        $("#explainst").html(result[mbti]["explainst"]);
+        $("#explain").html(result[mbti]["explain"]);
+        $("#explainwk").html(result[mbti]["explainwk"]);
+        $("#explain2").html(result[mbti]["explain2"]);
+      } else {
+        $(".progress-bar").attr('style','width: calc(100/6*'+num+'%)')
+        $("#title").html(q[num]["title"]);
+        $("#type").val(q[num]["type"]);
+        $("#A").html(q[num]["A"]);
+        $("#B").html(q[num]["B"]);
+        num++;
+      }
+    }        
+    function restart() {
+      location.replace("index.html");
+    }
+    function cpopen() {
+      $(".result").hide();
+      $(".cpopen").show();
+    }
+    function reopen() {
+      $(".cpopen").hide();
+      $(".result").show();
+    }
+  </script>
+  <!-- Go to www.addthis.com/dashboard to customize your tools -->
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-61ebadbc9d5ffa55"></script>
+</body>
+</html>
